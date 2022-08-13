@@ -25,20 +25,20 @@ Client.on("ready", () =>{
         Client.user.setActivity(status[rstatus], {type: "WATCHING"});
     }; setImmediate(randomStatus, 2000)
 
-    // var row = new Discord.MessageActionRow()
-    //     .addComponents(new Discord.MessageButton()
-    //         .setCustomId("open-ticket")
-    //         .setLabel("Ouvrir un Ticket")
-    //         .setStyle("PRIMARY")
-    //     );
+    var row = new Discord.MessageActionRow()
+        .addComponents(new Discord.MessageButton()
+            .setCustomId("open-ticket")
+            .setLabel("Ouvrir un Ticket")
+            .setStyle("PRIMARY")
+        );
 
-    // const embed = new Discord.MessageEmbed()
-    //     .setAuthor("SCP Breach RP")
-    //     .setColor("GREY")
-    //     .setTitle("**Ticket**")
-    //     .setDescription("Vous pouvez faire un Ticket en appuyant sur le bouton ci-dessous")
+    const embed = new Discord.MessageEmbed()
+        .setAuthor("SCP Breach RP")
+        .setColor("GREY")
+        .setTitle("**Ticket**")
+        .setDescription("Vous pouvez faire un Ticket en appuyant sur le bouton ci-dessous")
     
-    // Client.channels.cache.get("991810648881254481").send({embeds: [embed], components: [row]});
+    Client.channels.cache.get("991810648881254481").send({embeds: [embed], components: [row]});
 
 });
 
