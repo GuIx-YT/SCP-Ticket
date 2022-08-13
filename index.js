@@ -36,7 +36,7 @@ Client.on("ready", () =>{
     //     .setAuthor("SCP Breach RP")
     //     .setColor("GREY")
     //     .setTitle("**Ticket**")
-    //     .setDescription("Vous pouvez faire un Ticket en appuyent sur le bouton ci-dessous")
+    //     .setDescription("Vous pouvez faire un Ticket en appuyant sur le bouton ci-dessous")
     
     // Client.channels.cache.get("991810648881254481").send({embeds: [embed], components: [row]});
 
