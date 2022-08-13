@@ -1,0 +1,14 @@
+{
+  "name": "scp-ticket",
+  "version": "1.0.2",
+  "description": "BOT Ticket SCP",
+  "main": "index.js",
+  "author": "GuIx",
+  "license": "SCP Breach RP",
+  "dependencies": {
+    "discord.js": "^13.8.1"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
