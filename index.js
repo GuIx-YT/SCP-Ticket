@@ -25,7 +25,7 @@ Client.on("ready", () =>{
         Client.user.setActivity(status[rstatus], {type: "WATCHING"});
     }; setImmediate(randomStatus, 2000)
 
-    var row = new Discord.MessageActionRow()
+    /*var row = new Discord.MessageActionRow()
         .addComponents(new Discord.MessageButton()
             .setCustomId("open-ticket")
             .setLabel("Ouvrir un Ticket")
@@ -38,7 +38,7 @@ Client.on("ready", () =>{
         .setTitle("**Ticket**")
         .setDescription("Vous pouvez faire un Ticket en appuyent sur le bouton ci-dessous")
     
-    Client.channels.cache.get("991810648881254481").send({embeds: [embed], components: [row]});
+    Client.channels.cache.get("991810648881254481").send({embeds: [embed], components: [row]});*/
 
 });
 
