@@ -10,6 +10,8 @@ const Client = new Discord.Client({
     ]
 });
 
+const prefix = "t!";
+
 var nbTicket = 0;
 
 Client.login(process.env.TOKEN_SCP);
@@ -25,20 +27,20 @@ Client.on("ready", () =>{
         Client.user.setActivity(status[rstatus], {type: "WATCHING"});
     }; setImmediate(randomStatus, 2000)
 
-    /*var row = new Discord.MessageActionRow()
-        .addComponents(new Discord.MessageButton()
-            .setCustomId("open-ticket")
-            .setLabel("Ouvrir un Ticket")
-            .setStyle("PRIMARY")
-        );
+    // var row = new Discord.MessageActionRow()
+    //     .addComponents(new Discord.MessageButton()
+    //         .setCustomId("open-ticket")
+    //         .setLabel("Ouvrir un Ticket")
+    //         .setStyle("PRIMARY")
+    //     );
 
-    const embed = new Discord.MessageEmbed()
-        .setAuthor("SCP Breach RP")
-        .setColor("GREY")
-        .setTitle("**Ticket**")
-        .setDescription("Vous pouvez faire un Ticket en appuyent sur le bouton ci-dessous")
+    // const embed = new Discord.MessageEmbed()
+    //     .setAuthor("SCP Breach RP")
+    //     .setColor("GREY")
+    //     .setTitle("**Ticket**")
+    //     .setDescription("Vous pouvez faire un Ticket en appuyent sur le bouton ci-dessous")
     
-    Client.channels.cache.get("991810648881254481").send({embeds: [embed], components: [row]});*/
+    // Client.channels.cache.get("991810648881254481").send({embeds: [embed], components: [row]});
 
 });
 
@@ -102,5 +104,17 @@ Client.on("interactionCreate", interaction => {
 
             interaction.reply({content: "Ticket correctement supprimé", ephemeral: true});
         }
+    }
+});
+
+Client.on("messageCreate", message => {
+    if(message.author.bot) return;
+
+    if(message.content === prefix + "Status"){
+        message.reply({content: 'En recherhe...', ephemeral: true});
+
+        message.channel.send("Connecté sur " + Client.guilds.cache.size + " Serveur !");
+        message.channel.send("JSON Information : " + Client.guilds.cache.toJSON() + " Terminé !");
+        message.channel.send("Premier Serveur : https://discord.com/channels/" + Client.guilds.cache.first() + "/991378881552588802 Terminé");
     }
 });
